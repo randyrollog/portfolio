@@ -1,0 +1,15 @@
+<div id="contact_form">
+	<%= image_tag "x.svg", class: "x_out" %>
+	<div id="form_container">
+		<%= form_for @viewer do |f| %>
+			<%= f.text_field :name, placeholder: "Name", class: "contact_fields" %>
+			<%= f.text_field :email, placeholder: "Email", class: "contact_fields" %><br>
+			<%= f.text_field :phone_no, placeholder: "Phone", class: "contact_fields" %>
+			<%= f.text_field :company, placeholder: "Company", class: "contact_fields" %><br>
+			<%= f.text_field :scope_of_work, placeholder: "Scope of Work", class: "contact_fields" %>
+			<%= f.text_field :budget, placeholder: "$ Budget", class: "contact_fields" %><br>
+			<%= f.text_field :description, placeholder: "Description", id: "description", class: "contact_fields" %>
+			<%= f.submit "", id: "submit_btn" %>
+		<% end %>
+	</div>
+</div>

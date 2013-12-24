@@ -2,14 +2,20 @@
 	<h1>SITE IS STILL IN THE WORKS...</h1>
 	<h3>Check these out in the meantime</h3>
 	<ul id="icon_list">
-		<li id="github"><a href="https://github.com/Rollog" alt="github" id="github"></a></li>
+		<li id="github"><a href="https://github.com/randyrollog" alt="github" id="github"></a></li>
 		<li id="linkedin"><a href="https://www.linkedin.com/in/randyrlee" alt="linkedin" id="linkedin"></a></li>
 		<li id="soundcloud"><a href="https://soundcloud.com/ripleemusic" alt="soundcloud" id="soundcloud"></a></li>
-		<li id="resume"><a href="" alt="resume" id="resume"></a></li>
+		<li id="resume_icon"><a href="" alt="resume_icon" id="resume"></a></li>
 		<li id="email"><a href="google.com" alt="email" id="email"></a></li>
 	</ul>
 
-	<%= image_tag "RLee_Resume13_final.svg", id: "overlay_resume" %>
+	<div class="zoom" id="my_resume">
+	  <img src="/assets/Resume13_zoom.svg" id="resume_img" >
+	</div>
+
+
+	<%= render "form" %>
+
 </div>
 
 <footer id="footer">
@@ -17,24 +23,41 @@
 
 <script>
 	$(function(){
-		// $('#email').clipboard({
-  //     path: 'hi@randyrollog.com',
-  //     copy: function() {
-  //         alert('Text copied. Try to paste it now!');
-  //         return $('div#some-content').text();
-  //     }
-		// });
-		var o_resume = $("#overlay_resume")
-		o_resume.hide();
 
-    $("#resume").click(function(event){
+		var overlay = jQuery('<div id="overlay"> </div>');
+		overlay.appendTo(document.body);
+		overlay.hide();
+
+		var mr = $("#my_resume");
+		mr.hide();
+		mr.zoom();
+
+		var cf = $('#contact_form');
+		cf.hide();
+
+    $("#resume_icon").click(function(event){
     	event.preventDefault();
-      $("#overlay_resume").fadeIn(600);
-    });
+    	overlay.fadeIn(200);
+      mr.fadeIn(600);
+    })
 
-    $("#overlay_resume").click(function(event){
+    $("#my_resume").click(function(event){
     	event.preventDefault();
       $(this).fadeOut(600);
+      overlay.fadeOut(900);
     });
+
+    $("#email").click(function(event){
+    	event.preventDefault();
+    	overlay.fadeIn(200);
+      cf.fadeIn(600);
+    });
+
+    $(".x_out").click(function(event){
+    	event.preventDefault();
+    	cf.fadeOut(600);
+      overlay.fadeOut(900);
+    });
+
 	});
 </script>
