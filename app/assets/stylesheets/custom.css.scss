@@ -1,9 +1,9 @@
 // this red color
 $maincolor: #bd454a;
-$mainfont: 'proxima_nova_rgregular';
+$mainfont: proxima_nova_rgregular;
 
  @font-face {
-    font-family: 'proxima_nova_rgregular';
+    font-family: proxima_nova_rgregular;
     src: asset-url('assets/proximanova-regular-webfont.eot');
     src: asset-url('assets/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
          asset-url('assets/proximanova-regular-webfont.woff') format('woff'),
@@ -13,15 +13,11 @@ $mainfont: 'proxima_nova_rgregular';
     font-style: normal;
 }
 
-
-body {
-	height: 100%;
-}
-
 body {
 	background-color: $maincolor;
 	font-family: $mainfont;
 	margin: 0;
+	height: 100%;
 }
 
 .navbar {
