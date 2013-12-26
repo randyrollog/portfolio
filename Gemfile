@@ -8,6 +8,9 @@ gem 'pg'
 
 gem 'foundation-rails'
 
+#the latest boostrap with SASS gem (via thomas-mcdonald)
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 // this red color
 $maincolor: #bd454a;
 $mainfont: proxima_nova_rgregular;
@@ -20,62 +22,276 @@ body {
 	height: 100%;
 }
 
-// @media only screen {
-// 	.sm_navbar {
-// 	width: 100%;
-// 	height: 69px;
-// 	border-bottom: 1px solid white;
-// 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	vertical-align: middle;
-// 	}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter:alpha(opacity=80);
+  -moz-opacity:0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+  z-index: 1;
+}
 
-// 	#sm_nav_contact_wrapper {
-// 		margin-top: 5px;
-// 		float: left;
-// 	}
+@media only screen and (max-width: 40em) { 
 
-// 	.sm_navbar_contact {
-// 		color: white;
-// 		margin: 0;
-// 		padding: 0;
-// 		margin-left: 20px;
-// 	}
-
-// 	.sm_nav_content_right {
-// 		float: right;
-// 	}
-
-// 	#sm_r_logo {
-// 		margin-top: 6px;
-// 		margin-right: 20px;
-// 		height: 55px;
-// 		width: auto;
-// 		transition: .5s;
-// 	}
-// 	#sm_r_logo:hover {
-// 		opacity: .5;
-// 	}
-// }
-
-// @media only screen and (min-width: 40.063em) and (max-width: 90em) { 
-
-	#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    filter:alpha(opacity=80);
-    -moz-opacity:0.8;
-    -khtml-opacity: 0.8;
-    opacity: 0.8;
-    z-index: 1;
+	.nav-bar {
+		width: 100%;
+		height: 39px;
+		border-bottom: 1px solid white;
+		position: fixed;
+		top: 0;
+		left: 0;
+		vertical-align: middle;
+		overflow: hidden;
+		font-size: 10px;
 	}
 
-	.navbar {
+	#nav_contact_wrapper {
+		display: none;
+	}
+
+	#nav_contact_wrapper_small {
+		display: block;
+		margin-top: 5px;
+		float: left;
+		font-size: 20px;
+		vertical-align: middle;
+	}
+
+	.glyphicon-info-sign {
+		font-size: 15px;
+	}
+
+	#nav_contact_info {
+		padding-right: 12px;
+		position: absolute;
+		top: 40px;
+		left: 0;
+		background: $maincolor;
+		// border: 1px solid white;
+		box-shadow: 1px 5px 7px black;
+	}
+
+	.navbar_contact {
+		color: white;
+		margin: 0;
+		padding: 0;
+		margin-left: 10px;
+	}
+
+	.navbar_contact_small {
+		color: white;
+		margin: 0;
+		padding: 0;
+		margin-left: 10px;
+	}
+
+	.nav_content_right {
+		float: right;
+	}
+
+	#r_logo {
+		margin-top: 6px;
+		margin-right: 10px;
+		height: 25px;
+		width: auto;
+		transition: .5s;
+	}
+	#r_logo:hover {
+		opacity: .5;
+	}
+
+	.page_container {
+		width: 295px;
+		min-width: 320px;
+		margin: 60px auto;
+		color: white;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+		margin: -5px auto;
+	}
+
+	#icon_list {
+		margin-top: 50px;
+		list-style: none;
+		padding-left: 0;
+	}
+
+
+	#github {
+		background: asset-url("icons.png", image);
+		background-position:  0px 0px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 80px;
+		height: 80px;
+		display: inline-block;
+	}
+	#github:hover {
+		transition: .3s;
+		opacity: .5;
+	}
+
+	#linkedin {
+		background: asset-url("icons.png", image);
+		background-position:  -95px 0px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 80px;
+		height: 80px;
+		display: inline-block;
+	}
+	#linkedin:hover {
+		transition: .3s;
+		opacity: .5;
+	}
+
+	#soundcloud {
+		background: asset-url("icons.png", image);
+		background-position:  -202px 0px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 85px;
+		height: 80px;
+		display: inline-block;
+	}
+	#soundcloud:hover {
+		transition: .3s ease-in-out;
+		opacity: .5;
+	}
+
+	#resume_icon {
+		background: asset-url("icons.png", image);
+		background-position:  -310px 0px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 80px;
+		height: 80px;
+		display: inline-block;
+	}
+	#resume_icon:hover {
+		transition: .3s;
+		opacity: .5;
+	}
+
+	#my_resume {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 2;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	#resume_img {
+		width: 100%;
+		height: 100%;
+	}
+
+	#email {
+		background: asset-url("icons.png", image);
+		background-position:  -420px 0px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 80px;
+		height: 80px;
+		display: inline-block;
+	}
+	#email:hover {
+		transition: .3s;
+		opacity: .5;
+	}
+
+	.x_out {
+		position: absolute;
+		top: 0px;
+		right: 0;
+		height: 30px;
+	}
+
+	#contact_form {
+		background: $maincolor;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 3
+	}
+
+	#form_container {
+		margin-top: 15px auto;
+	}
+
+	.contact_fields {
+		padding: 5px;
+		width: 99%;
+		height: 40px;
+		margin-left: 1px;
+		margin-bottom: 4px;
+		font-size: 15px;
+		color: white;
+		background: none;
+		border: none;
+		border-bottom: 1px solid white;
+		border-left: 1px dashed white;
+		border-right: 1px dashed white;
+	}
+	.contact_fields:focus {
+		outline: none;
+	}
+	.contact_fields::-webkit-input-placeholder {
+	   color: white;
+	}
+
+	#submit_btn {
+		padding-top: 3px;
+		background: asset-url('arrow4.svg') 4px 4px;
+		text-decoration: none;
+		width: 100%;
+		height: 35px;
+		font-weight: bold;
+		color: white;
+		font-size: 20px;
+		border: 1px solid white;
+		background-repeat: no-repeat;
+	}
+	#submit_btn:hover {
+		background: asset-url('arrow3.svg') 4px 3px;
+		background-repeat: no-repeat;
+		background-color: white;
+		color: $maincolor;
+	}
+
+	#footer {
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background-image: asset-url("waves.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: -4;
+	}
+
+}
+
+@media only screen and (min-width: 64.063em) { 
+
+	.nav-bar {
 		width: 100%;
 		height: 69px;
 		border-bottom: 1px solid white;
@@ -89,6 +305,10 @@ body {
 	#nav_contact_wrapper {
 		margin-top: 5px;
 		float: left;
+	}
+
+	#nav_contact_wrapper_small {
+		display: none;
 	}
 
 	.navbar_contact {
@@ -145,7 +365,7 @@ body {
 
 	#linkedin {
 		background: asset-url("icons.png", image);
-		background-position:  -100px 0px;
+		background-position:  -95px 0px;
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 80px;
@@ -159,7 +379,7 @@ body {
 
 	#soundcloud {
 		background: asset-url("icons.png", image);
-		background-position:  -205px 0px;
+		background-position:  -202px 0px;
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 85px;
@@ -169,6 +389,18 @@ body {
 	#soundcloud:hover {
 		transition: .3s ease-in-out;
 		opacity: .5;
+	}
+
+	// adds magnifying glass icon to resume
+	.zoom:after {
+		content: '';
+		display: block;
+		width: 33px;
+		height: 33px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: asset-url("magnifyglass.png", image);
 	}
 
 	#resume_icon {
@@ -181,20 +413,6 @@ body {
 		display: inline-block;
 	}
 	#resume_icon:hover {
-		transition: .3s;
-		opacity: .5;
-	}
-
-	#email {
-		background: asset-url("icons.png", image);
-		background-position:  -420px 0px;
-		background-repeat: no-repeat;
-		background-size: cover;
-		width: 80px;
-		height: 80px;
-		display: inline-block;
-	}
-	#email:hover {
 		transition: .3s;
 		opacity: .5;
 	}
@@ -212,6 +430,20 @@ body {
 
 	#resume_img {
 		width: 440px;
+	}
+
+	#email {
+		background: asset-url("icons.png", image);
+		background-position:  -420px 0px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 80px;
+		height: 80px;
+		display: inline-block;
+	}
+	#email:hover {
+		transition: .3s;
+		opacity: .5;
 	}
 
 	.x_out {
@@ -303,4 +535,4 @@ body {
 		background-size: cover;
 		z-index: -4;
 	}
-// }
+}

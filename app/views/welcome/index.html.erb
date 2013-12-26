@@ -1,7 +1,13 @@
+<div id="nav_contact_info">
+	<p class="navbar_contact_small">Web Developer & Designer</p>
+	<p class="navbar_contact_small">310-621-3051</p>
+	<p class="navbar_contact_small">hi@randyrollog.com</p>
+</div>
+
 <div class="page_container">
 	<h1>SITE IS STILL IN THE WORKS...</h1>
 	<h3>Check these out in the meantime</h3>
-	<ul id="icon_list">
+	<ul id="icon_list" class="small-block-grid-3 medium-block-grid-5 large-block-grid-5">
 		<li id="github"><a href="https://github.com/randyrollog" alt="github" id="github"></a></li>
 		<li id="linkedin"><a href="https://www.linkedin.com/in/randyrlee" alt="linkedin" id="linkedin"></a></li>
 		<li id="soundcloud"><a href="https://soundcloud.com/ripleemusic" alt="soundcloud" id="soundcloud"></a></li>
@@ -9,20 +15,17 @@
 		<li id="email"><a href="google.com" alt="email" id="email"></a></li>
 	</ul>
 
-	<div id="my_resume">
+	<div class="zoom" id="my_resume">
 	  <%= image_tag "Resume13_zoom.png", id: "resume_img" %>
 	</div>
-
-
+	
 	<%= render "form" %>
-
 </div>
 
-<footer id="footer">
-</footer>
+<footer id="footer"></footer>
 
 <script>
-	$(function(){
+	$(function() {
 
 		var overlay = jQuery('<div id="overlay"> </div>');
 		overlay.appendTo(document.body);
@@ -35,11 +38,19 @@
 		var cf = $('#contact_form');
 		cf.hide();
 
+		var nci = $('#nav_contact_info');
+		nci.hide();
+
+		$("#nav_contact_wrapper_small").click(function(event){
+    	event.preventDefault();
+      nci.toggle('fast');
+    });
+
     $("#resume_icon").click(function(event){
     	event.preventDefault();
     	overlay.fadeIn(200);
       mr.fadeIn(600);
-    })
+    });
 
     $("#my_resume").click(function(event){
     	event.preventDefault();
