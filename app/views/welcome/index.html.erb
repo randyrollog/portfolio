@@ -15,8 +15,11 @@
 		<li id="email"><a href="google.com" alt="email" id="email"></a></li>
 	</ul>
 
-	<div class="zoom" id="my_resume">
-	  <%= image_tag "Resume13_zoom.png", id: "resume_img" %>
+	<div id="resume_wrapper">
+		<%= image_tag "x2.svg", id: "x_out_resume" %>
+		<div class="zoom" id="my_resume">
+		  <%= image_tag "Resume13_zoom.png", id: "resume_img" %>
+		</div>
 	</div>
 	
 	<%= render "form" %>
@@ -41,6 +44,9 @@
 		var nci = $('#nav_contact_info');
 		nci.hide();
 
+		var xOut = $('#x_out_resume');
+		xOut.hide();
+
 		$("#nav_contact_wrapper_small").click(function(event){
     	event.preventDefault();
       nci.toggle('fast');
@@ -50,12 +56,14 @@
     	event.preventDefault();
     	overlay.fadeIn(200);
       mr.fadeIn(600);
+      xOut.fadeIn(600);
     });
 
-    $("#my_resume").click(function(event){
+    xOut.click(function(event){
     	event.preventDefault();
       $(this).fadeOut(600);
       overlay.fadeOut(900);
+      xOut.fadeOut(600);
     });
 
     $("#email").click(function(event){
