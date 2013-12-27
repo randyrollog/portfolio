@@ -36,7 +36,7 @@ body {
   z-index: 1;
 }
 
-@media only screen and (max-width: 40em) { 
+@media (max-width: 40em) { 
 
 	.nav-bar {
 		width: 100%;
@@ -68,7 +68,7 @@ body {
 
 	#nav_contact_info {
 		padding-right: 12px;
-		position: absolute;
+		position: fixed;
 		top: 40px;
 		left: 0;
 		background: $maincolor;
@@ -106,9 +106,9 @@ body {
 	}
 
 	.page_container {
-		width: 295px;
-		min-width: 320px;
+		width: 290px;
 		margin: 60px auto;
+		// margin-left: -2px;
 		color: white;
 		text-align: center;
 	}
@@ -128,7 +128,7 @@ body {
 	}
 
 	#icon_list {
-		margin-top: 20px;
+		margin-top: 7px;
 		list-style: none;
 		padding-left: 0;
 	}
@@ -190,8 +190,25 @@ body {
 		opacity: .5;
 	}
 
+	#resume_wrapper {
+		width: 82%;
+		position: relative;
+		left: 50%;
+		top: 	50%;
+		margin-left: -41%;
+		margin-top: -91%;
+	}
+
+	#x_out_resume {
+		position: absolute;
+		right: 0px;
+		top: -2px;
+		z-index: 4;
+		height: 20px;
+	}
+
 	#my_resume {
-		position: fixed;
+		position: absolute;
 		left: 0;
 		top: 0;
 		z-index: 2;
@@ -201,7 +218,6 @@ body {
 
 	#resume_img {
 		width: 100%;
-		height: 100%;
 	}
 
 	#email {
@@ -233,7 +249,8 @@ body {
 		position: absolute;
 		left: 0;
 		top: 0;
-		z-index: 3
+		z-index: 3;
+		
 	}
 
 	#form_container {
@@ -252,6 +269,8 @@ body {
 		border: none;
 		border-bottom: 1px solid white;
 		border-left: 1px dashed white;
+		-webkit-appearance: none;
+		border-radius: 0;
 	}
 	.contact_fields:focus {
 		outline: none;
@@ -262,18 +281,20 @@ body {
 
 	#submit_btn {
 		padding-top: 2px;
-		background: asset-url('arrow4.svg') 4px 4px;
+		background: asset-url('arrow3.svg') 254px 3px;
+		background-color: white;
 		text-decoration: none;
 		width: 100%;
 		height: 35px;
 		font-weight: bold;
-		color: white;
+		color: $maincolor;
 		font-size: 20px;
 		border: 1px solid white;
 		background-repeat: no-repeat;
+		border-radius: 0;
 	}
 	#submit_btn:hover {
-		background: asset-url('arrow3.svg') 4px 3px;
+		background: asset-url('arrow4.svg') 4px 3px;
 		background-repeat: no-repeat;
 		background-color: white;
 		color: $maincolor;
@@ -432,8 +453,10 @@ body {
 
 	#x_out_resume {
 		position: absolute;
-		right: 2px;
-		top: 2px;
+		right: -3px;
+		top: -92px;
+		z-index: 4;
+		height: 30px;
 	}
 
 	#my_resume {
@@ -474,16 +497,14 @@ body {
 
 	#contact_form {
 		background: $maincolor;
-		width: 560px;
-		height: 245px;
-		// border: 1px solid white;
-		margin: 0 auto;
+		width: 72%;
+		height: 350px;
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		margin-left: -275px;
-		margin-top: -200px;
-		z-index: 3
+		margin-left: -36%;
+		margin-top: -180px;
+		z-index: 3;
 	}
 
 	#form_container {
@@ -492,8 +513,8 @@ body {
 
 	.contact_fields {
 		padding: 5px;
-		width: 255px;
-		height: 40px;
+		width: 500px;
+		height: 50px;
 		margin-left: 1px;
 		margin-bottom: 4px;
 		font-size: 15px;
@@ -512,7 +533,7 @@ body {
 
 	#description {
 		padding: 5px;
-		width: 472px;
+		width: 1005px;
 		margin-left: 1px;
 	}
 
@@ -525,22 +546,25 @@ body {
 	}
 
 	#submit_btn {
-		padding: 10px;
-		background: asset-url('arrow4.svg') 4px 4px;
+		padding: 8px;
+		background: asset-url('arrow3.svg') 454px 9px;
+		background-color: white;
 		text-decoration: none;
-		width: 50px;
-		height: 35px;
+		width: 500px;
+		height: 45px;
 		font-weight: bold;
-		color: $maincolor;
+		color: #bd5a4a;
 		font-size: 20px;
 		border: 1px solid white;
 		background-repeat: no-repeat;
 		margin-bottom: 0;
+		margin-top: 9px;
 	}
 	#submit_btn:hover {
-		background: asset-url('arrow3.svg') 4px 3px;
+		background: asset-url('arrow4.svg') 454px 9px;
 		background-repeat: no-repeat;
-		background-color: white;
+		background-color: #bd5a4a;
+		color: white;
 	}
 
 	#footer {
