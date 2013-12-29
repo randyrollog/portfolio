@@ -1,13 +1,20 @@
 <div class="nav-bar">
 	<div id="nav_contact_wrapper">
-		<p class="navbar_contact">Randy Rollog Lee // Web Developer & Designer</p>
-		<p class="navbar_contact">310-621-3051</p>
-		<p class="navbar_contact">hi@randyrollog.com</p>
+		<div class="navbar_contact">
+			<%= link_to image_tag("r_logo.svg", id: "r_logo" ), root_path %>
+		</div>
+		<div class="navbar_contact">
+		<p id="p1_nav">Randy Rollog Lee | Web Developer//Designer</p>
+		<p id="p2_nav">310-621-3051</p>
+		<p id="p3_nav">hi@randyrollog.com</p>
+		</div>		
 	</div>
+
+	<div class="nav_content_right">Contact</div>
+	<div class="nav_content_right">About</div>
+	<div class="nav_content_right">Works</div>
+
 	<div id="nav_contact_wrapper_small">
 		<p class="navbar_contact">Randy Rollog <span class="glyphicon glyphicon-info-sign"></span></p>
-	</div>
-	<div class="nav_content_right">
-		<%= link_to image_tag("r_logo.svg", id: "r_logo" ), root_path %>
 	</div>
 </div>

@@ -300,7 +300,7 @@ body {
 		color: $maincolor;
 	}
 
-	#footer {
+	#waves_div {
 		position: fixed;
 		bottom: -40px;
 		left: 0;
@@ -318,7 +318,7 @@ body {
 
 	.nav-bar {
 		width: 100%;
-		height: 69px;
+		height: 76px;
 		border-bottom: 1px solid white;
 		position: fixed;
 		top: 0;
@@ -339,32 +339,56 @@ body {
 	.navbar_contact {
 		color: white;
 		margin: 0;
-		padding: 0;
-		margin-left: 20px;
+		display: inline-block;
+		vertical-align: middle;
+		float: left;
+	}
+
+	p {
+		margin: 0;
 	}
 
 	.nav_content_right {
 		float: right;
+		color: white;
+		font-size: 30px;
+		margin-right: 10px;
+		margin-left: 20px;
+		line-height: 76px;
 	}
 
 	#r_logo {
 		margin-top: 6px;
-		margin-right: 20px;
+		margin-left: 10px;
+		margin-right: 9px;
 		height: 55px;
 		width: auto;
 		transition: .5s;
+
 	}
 	#r_logo:hover {
 		opacity: .5;
 	}
 
-	.page_container {
-		
-		width: 960px;
-		min-width: 320px;
+	.home_container {
+		width: 700px;
 		margin: 100px auto;
 		color: white;
 		text-align: center;
+	}
+
+	#tagline_wrapper {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.tagline_content {
+		display: inline;
+		vertical-align: middle;
+	}
+
+	.glyphicon-circle-arrow-down {
+		font-size: 20px;
 	}
 
 	#icon_list {
@@ -567,15 +591,27 @@ body {
 		color: white;
 	}
 
-	#footer {
-		position: fixed;
-		bottom: -10px;
-		left: 0;
+	#waves_div {
 		width: 100%;
 		height: 300px;
+		margin-top: 200px;
 		background-image: asset-url("waves.svg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		z-index: -4;
+	}
+
+	#works_container_wrapper {
+		width: 100%;
+		background: mistyrose;
+		margin: -5px auto;
+		padding-top: 20px;
+	}
+
+	#works_container {
+		width: 700px;
+		margin: 0 auto;
+		text-align: center;
+		color: dimgray;
 	}
 }
