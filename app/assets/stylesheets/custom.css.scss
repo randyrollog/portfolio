@@ -357,8 +357,10 @@ body {
 		line-height: 76px;
 	}
 
-	li {
+	ul, li {
 		list-style: none;
+		padding: 0;
+		margin:0;
 	}
 
 	#r_logo {
@@ -542,9 +544,22 @@ body {
 
 	#works_container {
 		width: 700px;
+		height: 440px;
 		margin: 0 auto;
 		text-align: center;
 		color: dimgray;
+		border: 2px solid $maincolor;
+	}
+
+	.works {
+		position: relative;
+		height: 368px;
+		background: none;
+		border: none;
+	}
+
+	.work_piece {
+		border-right: 1px solid $maincolor !important; 
 	}
 
 	#contact_container_wrapper {

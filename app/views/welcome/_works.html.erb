@@ -1,25 +1,52 @@
 <div id="works_container_wrapper">
 	<div id="works_container">
 		<h1>Selected Works</h1>
-		<ul data-orbit>
-		  <li>
-		    <img src="/assets/r_logo.svg" alt="slide 1" />
-		    <div class="orbit-caption">
-		      Pausm
-		    </div>
+
+		<ul class="works">
+		  <li class="work_piece">
+		    HearHere
+		    <img src="assets/icons.png">
+		  </li>
+		  <li class="work_piece">
+		    Half Gap
+		    <img src="assets/icons.png">
 		  </li>
 		  <li>
-		    <img src="/assets/waves.svg" alt="slide 2" />
-		    <div class="orbit-caption">
-		      HearHere
-		    </div>
-		  </li>
-		  <li>
-		    <img src="/assets/icons.png" alt="slide 3" />
-		    <div class="orbit-caption">
-		      Half Gap
-		    </div>
+		    Pausm
+		    <img src="assets/icons.png">
 		  </li>
 		</ul>
+
 	</div>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+    $('.works').slides({
+    	vertical:false,
+			resizable:false,
+			active:false,
+			transitionSpeed: 400,
+			easing:"swing",
+			events: {
+				activate:"click",
+				deactivate:"click"
+			},
+			handle:".gsSlide",
+			stayOpen: false,
+			keyEvents:false,
+			circle : false,
+			classes:{
+				active:"gsAactive",
+				vertical:"gsVertical",
+				horizontal:"gsHorizontal",
+				slide:"gsSlide",
+				deactivating:"gsDeactivating",
+				positionActive:"gsPositionActive"
+			},
+			cache:false,
+			limits : {},
+			callbacks : {}
+    });
+  });
+</script>
