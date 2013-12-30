@@ -3,7 +3,7 @@
 <div class="home_container">
 	<h1>Hey there, I'm Randy.</h1>
 	<div id="tagline_wrapper">
-		<h3 class="tagline_content">checkout my works  </h3>
+		<h3 class="tagline_content">check out my works  </h3>
 		<span class="glyphicon glyphicon-circle-arrow-down tagline_content"></span>
 	</div>
 	<div id="resume_wrapper">
@@ -17,6 +17,10 @@
 <div id="waves_div"></div>
 
 <%= render "works" %>
+
+<%= render "contact" %>
+
+<footer></footer>
 
 <script>
 	$(function() {
@@ -32,12 +36,14 @@
 		var cf = $('#contact_form');
 		cf.hide();
 
+		// hide info for larger screens
 		var nci = $('#nav_contact_info');
 		nci.hide();
 
 		var xOut = $('#x_out_resume');
 		xOut.hide();
 
+		// toggles visibility of contact info for small screens
 		$("#nav_contact_wrapper_small").click(function(event){
     	event.preventDefault();
       nci.toggle('fast');
@@ -55,12 +61,6 @@
       $(this).fadeOut(600);
       overlay.fadeOut(900);
       mr.fadeOut(600);
-    });
-
-    $("#email").click(function(event){
-    	event.preventDefault();
-    	overlay.fadeIn(200);
-      cf.fadeIn(600);
     });
 
     $(".x_out").click(function(event){

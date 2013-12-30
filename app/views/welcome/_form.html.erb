@@ -1,16 +1,14 @@
 <div id="contact_form">
-	<h2>Hire Me!</h2>
-	<%= image_tag "x.svg", class: "x_out" %>
 	<div id="form_container">
 		<%= form_for @viewer do |f| %>
 			<%= f.text_field :name, placeholder: "Name", class: "contact_fields" %>
-			<%= f.text_field :email, placeholder: "Email", class: "contact_fields" %><br>
+			<%= f.text_field :email, placeholder: "Email", class: "contact_fields right_contact" %><br>
 			<%= f.text_field :phone_no, placeholder: "Phone", class: "contact_fields" %>
-			<%= f.text_field :company, placeholder: "Company", class: "contact_fields" %><br>
+			<%= f.text_field :company, placeholder: "Company", class: "contact_fields right_contact" %><br>
 			<%= f.text_field :scope_of_work, placeholder: "Scope of Work", class: "contact_fields" %>
-			<%= f.text_field :budget, placeholder: "$ Budget", class: "contact_fields" %><br>
-			<%= f.text_field :description, placeholder: "Description", id: "description", class: "contact_fields" %><br>
-			<%= f.submit "Let's Do This", id: "submit_btn" %>
+			<%= f.text_field :budget, placeholder: "$ Budget", class: "contact_fields right_contact" %><br>
+			<%= f.text_area :description, rows: "10", placeholder: "Description", id: "description", class: "contact_fields" %><br>
+			<%= f.submit "Send", id: "submit_btn" %>
 		<% end %>
 	</div>
 </div>
