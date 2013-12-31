@@ -653,6 +653,10 @@ body {
 		// border: 2px solid $maincolor;
 	}
 
+	#whtiknw {
+		margin-top: 0;
+	}
+
 	#skill_list {
 		width: 165px;
 		text-align: left;
@@ -661,15 +665,50 @@ body {
 		float: left;
 	}
 
+	#bio_container {
+		width: 500px;
+		height: 343px;
+	}
+
 	#bio {
 		width: 500px;
 		float: right;
 		font-size: 18px;
-		margin-top: 118px;
+		margin-top: 94px;
 		text-align: justify;
 	}
 
+	#resmus_wrapper {
+		width: 500px;
+		height: 47px;
+		text-align: left;
+	}
+
+	#resume_btn {
+		width: 110px;
+		height: 30px;
+		background: cadetblue;
+		line-height: 30px;
+		font-size: 20px;
+
+	}
+
+	#music_btn {
+		font-size: 20px;
+		width: 190px;
+		height: 30px;
+		line-height: 30px;
+		background: coral;
+	}
+	
+
 	.about_sections {
+		display: inline-block;
+	}
+
+	.resume_music_btns {
+		display: inline-block;
+		text-align: center;
 	}
 
 	#contact_container_wrapper {
@@ -706,11 +745,11 @@ body {
 
 	#contact_form {
 		// background: $maincolor;
-		width: 446px;
+		width: 441px;
 		height: 293px;
 		position: relative;
 		top: 123px;
-		left: 13px;
+		left: 19px;
 	}
 
 	#form_container {
@@ -718,7 +757,7 @@ body {
 	}
 
 	.contact_fields {
-		width: 211px;
+		width: 205px;
 		height: 50px;
 		margin: 0;
 		margin-bottom: 4px;
@@ -740,7 +779,8 @@ body {
 	}
 
 	#description {
-		width: 445px;
+		width: 434px;
+		height: 71px;
 	}
 
 	#budget {
@@ -752,25 +792,22 @@ body {
 	}
 
 	#submit_btn {
-		background: asset-url('arrow3.svg') 454px 9px;
 		background-color: khaki;
 		text-decoration: none;
 		width: 125px;
 		height: 45px;
 		font-weight: bold;
-		font-size: 20px;
+		font-size: 22px;
 		border: 0;
 		border-radius: 2px;
-		background-repeat: no-repeat;
 		margin-bottom: 0;
-		margin-top: 7px;
+		margin-top: 4px;
+		margin-left: 309px
 	}
 	#submit_btn:hover {
-		background: asset-url('arrow4.svg') 454px 9px;
 		background-repeat: no-repeat;
 		background-color: #bd5a4a;
 		color: white;
-		border: 1px solid lightslategrey;
 	}
 
 	#extra_info {
