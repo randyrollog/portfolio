@@ -26,19 +26,22 @@ plangular player -->
 			</div>
 			<div id="resmus_wrapper">
 				<p id="resume_btn" class="resume_music_btns">Resume</p>
-				<p id="music_btn" class="resume_music_btns">Music made by me</p>
+				<p id="music_btn" class="resume_music_btns">Music I Made</p>
 				<!-- plangular player -->
 	      <div plangular data-src="https://soundcloud.com/ripleemusic/sets/selected-works">
-	      	<a href="" ng-click="player.previous(playlist)">Prev</a>
-				  <a href="" ng-click="player.playPlaylist(playlist)" ng-hide="player.tracks == playlist.tracks && player.playing">Play</a>
-				  <a href="" ng-click="player.pause()" ng-show="player.playing == track">Pause</a>
-				  <a href="" ng-click="player.pause()" ng-show="player.tracks == playlist.tracks &amp;&amp; player.playing">Pause</a>
-				  <a href="" ng-click="player.next(playlist)">Next</a>
+	      	<a href="" ng-click="player.previous(playlist)"><img src="assets/prev.svg" class="playback_controls"></a>
+				  <a href="" ng-click="player.playPlaylist(playlist)" ng-hide="player.tracks == playlist.tracks && player.playing"><img src="assets/play_song.svg" class="playback_controls"></a>
+				  <a href="" ng-click="player.pause()" ng-show="player.tracks == playlist.tracks &amp;&amp; player.playing"><img src="assets/pause.svg" class="playback_controls"></a>
+				  <a href="" ng-click="player.next(playlist)"><img src="assets/next.svg" class="playback_controls"></a>
+				  <progress value="{{ currentTime / duration }}" ng-click="seekTo($event)">
+				  	{{ currentTime / duration }}
+				  </progress>
+			    <small>{{ currentTime | playTime }} | {{ duration | playTime }}</small>
 				  
 				  <ul id="playlist">
 				  	<!-- hide songs that aren't being played -->
 				  	<li ng-repeat="track in playlist.tracks">
-				  		<a href="" ng-click="player.play(playlist.tracks, $index)" ng-class="{ 'dark-gray': (player.playing || player.paused) != track, 'mid-gray': (player.playing || player.paused) == track }">
+				  		<a href="" ng-click="player.play(playlist.tracks, $index)" ng-hide="track != player.playing" ng-show"track == player.paused">
 				  			<p>{{ track.title }}</p>
 	            </a>
 	          </li>
