@@ -9,9 +9,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "Randy Rollog Lee//Web Developer & Designer" %></title>
 
 	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js" %>
-    <%= javascript_include_tag "plangular.js" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	  <%= favicon_link_tag "r_logo_fav.svg" %>
 	  <%= csrf_meta_tags %>
   </head>
