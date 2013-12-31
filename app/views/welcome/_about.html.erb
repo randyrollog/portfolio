@@ -29,6 +29,19 @@ plangular player -->
 			<div id="resmus_wrapper">
 				<p id="resume_btn" class="resume_music_btns">Resume</p>
 				<p id="music_btn" class="resume_music_btns">Music made by me</p>
+				<!-- <article plangular data-src="">
+	      </article> -->
+	      <div plangular data-src="https://soundcloud.com/ripleemusic/sets/selected-works">
+				  <a href="" ng-click="player.play(track)" ng-hide="player.playing == track">Play</a>
+				  <a href="" ng-click="player.pause()" ng-show="player.playing == track">Pause</a>
+				  <h1>{{ track.user.username }} - {{ track.title }}</h1>
+				  <ul id="playlist">
+				  	<li ng-repeat="track in playlist.tracks">
+				  		<a href="" ng-click="player.play(playlist.tracks, $index)" ng-class="{ 'dark-gray': (player.playing || player.paused) != track, 'mid-gray': (player.playing || player.paused) == track }">
+	            </a>
+	          </li>
+				  </ul>
+				</div>
 			</div>
 		</div>
 	</div>
