@@ -15,11 +15,13 @@
 		  </li>
 		  <li class="work_piece">
 		    <h4 class="piece_titles">Pausm</h4>
-		    <img src="assets/icons.png">
+		    <%= link_to "Visit ►", "http://pausm.herokuapp.com/", class: "site_links" %>
+		    <img id="hearhere" src="assets/pausmweb.png">
 		  </li>
 		  <li>
 		    <h4 class="piece_titles">This Site!</h4>
-		    <img src="assets/icons.png">
+		    <%= link_to "Visit ►", "http://randyrollog.com/", class: "site_links" %>
+		    <img id="hearhere" src="assets/portfolioweb.png">
 		  </li>
 		</ul>
 
@@ -36,8 +38,8 @@
 			transitionSpeed: 200,
 			easing:"swing",
 			events: {
-				activate:"click",
-				deactivate:"click"
+				activate:"mouseenter",
+				deactivate:"mouseout"
 			},
 			handle:".gsSlide",
 			stayOpen: false,
