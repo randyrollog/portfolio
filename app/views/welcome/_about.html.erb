@@ -26,26 +26,31 @@ plangular player -->
 			</div>
 			<div id="resmus_wrapper">
 				<p id="resume_btn" class="resume_music_btns">Resume</p>
-				<p id="music_btn" class="resume_music_btns">Music I Made</p>
+				<img src="assets/music.svg" id="music_btn" class="resume_music_btns">
+				
 				<!-- plangular player -->
-	      <div plangular data-src="https://soundcloud.com/ripleemusic/sets/selected-works">
-	      	<a href="" ng-click="player.previous(playlist)"><img src="assets/prev.svg" class="playback_controls"></a>
-				  <a href="" ng-click="player.playPlaylist(playlist)" ng-hide="player.tracks == playlist.tracks && player.playing"><img src="assets/play_song.svg" class="playback_controls"></a>
-				  <a href="" ng-click="player.pause()" ng-show="player.tracks == playlist.tracks &amp;&amp; player.playing"><img src="assets/pause.svg" class="playback_controls"></a>
-				  <a href="" ng-click="player.next(playlist)"><img src="assets/next.svg" class="playback_controls"></a>
-				  <progress value="{{ currentTime / duration }}" ng-click="seekTo($event)">
-				  	{{ currentTime / duration }}
-				  </progress>
-			    <small>{{ currentTime | playTime }} | {{ duration | playTime }}</small>
+	      <div id="song_player" plangular data-src="https://soundcloud.com/ripleemusic/sets/selected-works">
+	      	<div class="media">
+		      	<a href="" ng-click="player.previous(playlist)"><img src="assets/prev.svg" class="playback_controls"></a>
+					  <a href="" ng-click="player.playPlaylist(playlist)" ng-hide="player.tracks == playlist.tracks && player.playing"><img src="assets/play_song.svg" class="playback_controls"></a>
+					  <a href="" ng-click="player.pause()" ng-show="player.tracks == playlist.tracks &amp;&amp; player.playing"><img src="assets/pause.svg" class="playback_controls"></a>
+					  <a href="" ng-click="player.next(playlist)"><img src="assets/next.svg" class="playback_controls"></a>
+					  <progress value="{{ currentTime / duration }}" ng-click="seekTo($event)">
+					  	{{ currentTime / duration }}
+					  </progress>
+				    <small>{{ currentTime | playTime }} | {{ duration | playTime }}</small>
+			    </div>
 				  
-				  <ul id="playlist">
-				  	<!-- hide songs that aren't being played -->
-				  	<li ng-repeat="track in playlist.tracks">
-				  		<a href="" ng-click="player.play(playlist.tracks, $index)" ng-hide="track != player.playing" ng-show"track == player.paused">
-				  			<p>{{ track.title }}</p>
-	            </a>
-	          </li>
-				  </ul>
+				  <div class="media">
+					  <ul id="playlist">
+					  	<!-- hide songs that aren't being played -->
+					  	<li ng-repeat="track in playlist.tracks" class="track_name">
+					  		<a href="" ng-click="player.play(playlist.tracks, $index)" ng-hide="track != player.playing" ng-show"track == player.paused" style="color: white;">
+					  			<p>Riplee - {{ track.title }}</p>
+		            </a>
+		          </li>
+					  </ul>
+				  </div>
 				</div>
 				<!-- end of plangular player -->
 			</div>
