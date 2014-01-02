@@ -362,7 +362,7 @@ body {
 	.nav_content_right {
 		float: right;
 		color: white;
-		font-size: 25px;
+		font-size: 23px;
 		margin-right: 10px;
 		margin-left: 20px;
 		line-height: 85px;
@@ -388,10 +388,17 @@ body {
 
 	.home_container {
 		width: 700px;
+		height: 400px;
 		margin: 100px auto;
 		color: white;
 		text-align: center;
 		padding-top: 50px;
+		background: asset-url("bgtexture.svg") 50% 0px;
+		background-repeat: no-repeat;
+	}
+
+	#greeting_header {
+		margin-top: 100px;
 	}
 
 	#tagline_wrapper {
@@ -539,7 +546,7 @@ body {
 	#waves_div {
 		width: 100%;
 		height: 300px;
-		margin-top: 200px;
+		margin-top: -123px;
 		background-image: asset-url("waves.svg");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -548,7 +555,7 @@ body {
 
 	#works_container_wrapper {
 		width: 100%;
-		height: 500px;
+		height: 550px;
 		background: mistyrose;
 		margin: -36px auto;
 		padding-top: 20px;
@@ -561,7 +568,8 @@ body {
 		margin: 0 auto;
 		text-align: center;
 		color: dimgray;
-		// border: 2px solid $maincolor;
+		background: asset-url("bgtexture.svg") 50% -26px;
+		background-repeat: no-repeat;
 	}
 
 	.section_headers {
@@ -645,11 +653,13 @@ body {
 
 	#about_container_wrapper {
 		width: 100%;
-		height: 555px;
+		height: 580px;
 		color: white;
 		padding-top: 20px;
 		margin-top: -20px;
 		position: relative;
+		background: asset-url("bgtexture.svg") 50% 50%;
+		background-repeat: no-repeat;
 	}
 
 	#about_container {
@@ -657,8 +667,6 @@ body {
 		height: 440px;
 		margin: 0 auto;
 		text-align: center;
-
-		// border: 2px solid $maincolor;
 	}
 
 	#whtiknw {
@@ -675,14 +683,14 @@ body {
 
 	#bio_container {
 		width: 500px;
-		height: 343px;
+		height: 360px;
+		margin-top: 91px;
 	}
 
 	#bio {
 		width: 500px;
 		float: right;
 		font-size: 21px;
-		margin-top: 91px;
 		text-align: justify;
 	}
 
@@ -696,8 +704,22 @@ body {
 		height: 43px;
 	}
 
+	#music_caption {
+		position: absolute;
+		height: 71px;
+		width: 140px;
+		border: 2px solid white;
+		border-radius: 4px;
+		padding: 3px;
+		margin-left: 66px;
+		margin-top: 3px;
+	}
+
 	#song_player {
+		margin-top: 14px;
 		display: inline-block;
+		vertical-align: middle;
+		position: relative;
 	}
 
 	#music_btn {
@@ -714,7 +736,7 @@ body {
 	  -webkit-appearance: none;
 	   appearance: none;
 
-	  width: 145px;
+	  width: 215px;
 	  height: 20px;
 	}
 
@@ -737,11 +759,13 @@ body {
     background-size: 35px 20px, 100% 100%, 100% 100%;
 	}
 
+
 	#playlist {
 		width: 300px;
-		height: 100px;
+		text-align: left;
 		position: absolute;
-		right: 162px;
+		left: 72px;
+		top: 23px;
 	}
 
 	.track_name {
@@ -764,7 +788,6 @@ body {
 		margin-top: 20px;
 		padding-top: 20px;
 		background: lightslategrey;
-		
 	}
 
 	#contact_container {

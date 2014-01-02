@@ -6,8 +6,6 @@ gem 'rails', '4.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-gem 'foundation-rails'
-
 #the latest boostrap with SASS gem (via thomas-mcdonald)
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 

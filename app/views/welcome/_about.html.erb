@@ -31,11 +31,14 @@ plangular player -->
 					<p id="bio" >Howdy! I'm a graphic designer turned programmer with a degree in business from USC. I found coding as a fun way to kill time on the side. I read a lot about coding and utilized other online resources, but... I needed more depth. So, I enrolled into an immersive programming school called General Assembly. After a few months of 60-70hr weeks, multiple all-nighters, and no social life, I am fully stacked to make awesome web apps. Call me a Drogrammer (designer + programmer). I love loud music, clean and simple code/design, pizza, & learning new things. Let's make something wicked.</p>
 			</div>
 			<div id="resmus_wrapper">
-					<img src="assets/resume_icon.svg" id="resume_btn" class="resume_music_btns">
+				<img src="assets/resume_icon.svg" id="resume_btn" class="resume_music_btns">
 				<img src="assets/music.svg" id="music_btn" class="resume_music_btns">
+				<div id="music_caption">
+					click this then press play to hear some of my music
+				</div>
 				
 				<!-- plangular player -->
-	      <div id="song_player" plangular data-src="https://soundcloud.com/ripleemusic/sets/selected-works">
+	      <div id="song_player" plangular data-src="https://soundcloud.com/ripleemusic/sets/selected-works" class="resume_music_btns">
 	      	<div class="media">
 		      	<a href="" ng-click="player.previous(playlist)"><img src="assets/prev.svg" class="playback_controls"></a>
 					  <a href="" ng-click="player.playPlaylist(playlist)" ng-hide="player.tracks == playlist.tracks && player.playing"><img src="assets/play_song.svg" class="playback_controls"></a>
@@ -47,7 +50,7 @@ plangular player -->
 				    <small>{{ currentTime | playTime }} | {{ duration | playTime }}</small>
 			    </div>
 				  
-				  <div class="media">
+				  <div id="playlist_container" class="media">
 					  <ul id="playlist">
 					  	<!-- hide songs that aren't being played -->
 					  	<li ng-repeat="track in playlist.tracks" class="track_name">
@@ -57,9 +60,32 @@ plangular player -->
 		          </li>
 					  </ul>
 				  </div>
+
 				</div>
 				<!-- end of plangular player -->
 			</div>
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(function() {
+		$('#song_player').hide();
+		$('#music_caption').hide();
+
+		$('#music_btn').mouseenter(function(event) {
+			event.preventDefault();
+			$('#music_caption').show(100);
+			$(this).click(function(event) {
+				$('#song_player').show(200);
+			});
+		});
+
+		$('#music_btn').mouseout(function(event) {
+			event.preventDefault();
+			$('#music_caption').hide(150);
+		});
+
+
+	});
+</script>
