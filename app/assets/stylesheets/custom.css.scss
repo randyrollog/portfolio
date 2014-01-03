@@ -333,7 +333,7 @@ body {
 		top: 0;
 		left: 0;
 		vertical-align: middle;
-		z-index: 1;
+		z-index: 5;
 	}
 
 	#nav_contact_wrapper {
@@ -369,6 +369,7 @@ body {
 	#nav_right_wrapper {
 		border-bottom: 1px solid white;
 		float: right;
+		height: 89px;
 	}
 
 	.nav_content_right {
@@ -376,7 +377,7 @@ body {
 		font-size: 22px;
 		margin-right: 10px;
 		margin-left: 20px;
-		line-height: 85px;
+		line-height: 86px;
 	}
 
 	ul, li {
@@ -423,6 +424,22 @@ body {
 		border-radius: 2px;
 		z-index: 1;
 		
+	}
+
+	#prompt_form {
+		width: 70%;
+		margin: 0 auto;
+		z-index: 6;
+		text-align: center;
+		position: absolute;
+		left: 50%;
+		margin-left: -35%;
+	}
+
+	.input_prompts {
+		width: 65%;
+		padding: 20px;
+		// font-size: 30px;
 	}
 
 	#home_container_wrapper {
@@ -496,7 +513,7 @@ body {
 
 	#linkedin {
 		background: asset-url("icon2.png", image);
-		background-position:  -51px 0px;
+		background-position: -51px 0px;
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 40px;

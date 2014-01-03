@@ -1,11 +1,19 @@
 <%= render 'layouts/navbar' %>
 
+<!-- <div id="prompt_form">
+	<form>
+		<input type="text" value="Your Name" id="name_prompt" class="input_prompts"><br>
+		<input type="text" value="Your Number" id="number_prompt" class="input_prompts"><br>
+		<input type="submit" value="Cool">
+	</form>
+</div> -->
+
 <div id="home_container_wrapper">
 	<div class="home_container">
 		<h1 id="greeting_header">Hey there, I'm Randy.</h1>
 		<div id="tagline_wrapper">
 			<h3 class="tagline_content">check out my works </h3>
-			<a href="#works" data-menu-top="260"><span class="glyphicon glyphicon-circle-arrow-down tagline_content"></span></a>
+			<a href="#works" data-menu-top="216"><span class="glyphicon glyphicon-circle-arrow-down tagline_content"></span></a>
 		</div>
 		<!-- <div id="resume_wrapper">
 			<%#= image_tag "x2.svg", id: "x_out_resume" %>
@@ -43,7 +51,7 @@
 	    var scrolled = $(window).scrollTop();
 	    $('#back_wave').css('top',(470+(scrolled*.05))+'px');
 	    $('#mid_wave').css('top',(520-(scrolled*.25))+'px');
-	    $('#front_wave').css('top',(530+(scrolled*.08))+'px');
+	    $('#front_wave').css('top',(500-(scrolled*.28))+'px');
 		}
 
 		var overlay = jQuery('<div id="overlay"> </div>');
