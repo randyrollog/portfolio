@@ -84,6 +84,7 @@ body {
 		box-shadow: 1px 5px 7px black;
 	}
 
+
 	.navbar_contact {
 		color: white;
 		margin: 0;
@@ -329,9 +330,9 @@ body {
 		width: 100%;
 		height: 85px;
 		border-bottom: 1px solid white;
-		position: fixed;
-		top: 0;
-		left: 0;
+		// position: fixed;
+		// top: 0;
+		// left: 0;
 		vertical-align: middle;
 		z-index: 2;
 	}
@@ -343,6 +344,10 @@ body {
 
 	#nav_contact_wrapper_small {
 		display: none;
+	}
+
+	#nav_contact_infooo {
+		margin-left: 72px;
 	}
 
 	.navbar_contact {
@@ -374,15 +379,19 @@ body {
 		margin:0;
 	}
 
+	.scroll_home {
+		position: fixed;
+
+	}
+
 	#r_logo {
-		margin-left: 10px;
+		margin-left: 12px;
 		margin-right: 9px;
 		height: 52px;
 		width: auto;
 		transition: .5s;
-		margin-top: 7px;
+		margin-top: 14px;
 		z-index: 3;
-		position: relative;
 	}
 	#r_logo:hover {
 		opacity: .5;
@@ -390,10 +399,9 @@ body {
 
 	#home_logo {
 		height: 47px;
-		position: absolute;
 		left: 11px;
 		top: 15px;
-		z-index: 1;
+		z-index: 2;
 		opacity: 0;
 	}
 
@@ -401,11 +409,11 @@ body {
 		width: 7px;
 		height: 5px;
 		background: asset-url("cream_pixels.png");
-		position: absolute;
-		left: 32px;
+		left: 33px;
 		top: 16px;
 		transition: .5s;
 		border-radius: 2px;
+		z-index: 1;
 	}
 
 	#home_container_wrapper {
@@ -417,7 +425,7 @@ body {
 	.home_container {
 		width: 700px;
 		height: 400px;
-		margin: 100px auto;
+		margin: 20px auto;
 		color: white;
 		text-align: center;
 		padding-top: 50px;
@@ -439,8 +447,20 @@ body {
 		vertical-align: middle;
 	}
 
+	a {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+
 	.glyphicon-circle-arrow-down {
 		font-size: 20px;
+		opacity: .8;
+		color: white;
+	}
+	.glyphicon-circle-arrow-down:hover {
+		opacity: 1
 	}
 
 	#icon_list {
