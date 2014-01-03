@@ -402,7 +402,7 @@ body {
 		height: 5px;
 		background: asset-url("cream_pixels.png");
 		position: absolute;
-		left: 33px;
+		left: 32px;
 		top: 16px;
 		transition: .5s;
 		border-radius: 2px;
@@ -625,7 +625,7 @@ body {
 	.about_headers {
 		position: absolute;
 		left: 50%;
-		top: -7px;
+		top: -40px;
 		width: 150px;
 		margin-left: -75px;
 		font-weight: 900;
@@ -694,7 +694,7 @@ body {
 		height: 580px;
 		color: white;
 		padding-top: 20px;
-		margin-top: -20px;
+		margin-top: -50px;
 		position: relative;
 		background: asset-url("bgtexture.svg") 50% 50%;
 		background-repeat: no-repeat;
@@ -704,7 +704,7 @@ body {
 	#about_container {
 		width: 700px;
 		height: 440px;
-		margin: 0 auto;
+		margin: -30px auto;
 		text-align: center;
 	}
 
