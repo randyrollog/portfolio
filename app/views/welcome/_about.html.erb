@@ -30,8 +30,8 @@ resume -->
 					<p id="bio" >Howdy! I'm a graphic designer turned programmer with a degree in business from USC. I found coding as a fun way to kill time on the side. I read a lot about coding and utilized other online resources, but... I needed more depth. So, I enrolled into an immersive programming school called General Assembly. After a few months of 60-70hr weeks, multiple all-nighters, and no social life, I am fully stacked to make awesome web apps. Call me a Drogrammer (designer + programmer). I love loud music, clean and simple code/design, pizza, & learning new things. Let's make something wicked.</p>
 			</div>
 			<div id="resmus_wrapper">
-				<img src="assets/resume_icon.svg" id="resume_btn" class="resume_music_btns">
-				<img src="assets/music.svg" id="music_btn" class="resume_music_btns">
+				<%= image_tag "resume_icon.svg", id: "resume_btn", class: "resume_music_btns" %>
+				<%= image_tag "music.svg", id: "music_btn", class: "resume_music_btns" %>
 				<div id="music_caption">
 					click this then press play to hear some of my music
 				</div>
@@ -39,10 +39,17 @@ resume -->
 				<!-- plangular player -->
 	      <div id="song_player" plangular data-src="https://soundcloud.com/ripleemusic/sets/selected-works" class="resume_music_btns">
 	      	<div class="media">
-		      	<a href="" ng-click="player.previous(playlist)"><img src="assets/prev.svg" class="playback_controls"></a>
-					  <a href="" ng-click="player.playPlaylist(playlist)" ng-hide="player.tracks == playlist.tracks && player.playing"><img src="assets/play_song.svg" class="playback_controls"></a>
-					  <a href="" ng-click="player.pause()" ng-show="player.tracks == playlist.tracks &amp;&amp; player.playing"><img src="assets/pause.svg" class="playback_controls"></a>
-					  <a href="" ng-click="player.next(playlist)"><img src="assets/next.svg" class="playback_controls"></a>
+		      	<a href="" ng-click="player.previous(playlist)">
+		      		<%= image_tag "prev.svg", class: "playback_controls" %>
+		      	</a>
+					  <a href="" ng-click="player.playPlaylist(playlist)" ng-hide="player.tracks == playlist.tracks && player.playing">
+					  	<%= image_tag "play_song.svg", class: "playback_controls" %>
+					  </a>
+					  <a href="" ng-click="player.pause()" ng-show="player.tracks == playlist.tracks &amp;&amp; player.playing">
+					  	<%= image_tag "pause.svg", class: "playback_controls" %>
+					  </a>
+					  <a href="" ng-click="player.next(playlist)">
+					  	<%= image_tag "next.svg", class: "playback_controls" %>
 					  <progress value="{{ currentTime / duration }}" ng-click="seekTo($event)">
 					  	{{ currentTime / duration }}
 					  </progress>
