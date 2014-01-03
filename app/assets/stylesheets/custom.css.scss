@@ -107,6 +107,7 @@ body {
 		margin-right: 10px;
 		height: 25px;
 		width: auto;
+		position: relative;
 		transition: .5s;
 	}
 	#r_logo:hover {
@@ -332,7 +333,6 @@ body {
 		top: 0;
 		left: 0;
 		vertical-align: middle;
-		overflow: hidden;
 		z-index: 2;
 	}
 
@@ -381,9 +381,37 @@ body {
 		width: auto;
 		transition: .5s;
 		margin-top: 7px;
+		z-index: 3;
+		position: relative;
 	}
 	#r_logo:hover {
 		opacity: .5;
+	}
+
+	#home_logo {
+		height: 47px;
+		position: absolute;
+		left: 11px;
+		top: 15px;
+		z-index: 1;
+		opacity: 0;
+	}
+
+	#meter {
+		width: 7px;
+		height: 5px;
+		background: asset-url("cream_pixels.png");
+		position: absolute;
+		left: 33px;
+		top: 16px;
+		transition: .5s;
+		border-radius: 2px;
+	}
+
+	#home_container_wrapper {
+		width: 100%;
+		height: 450px;
+		// background-color: $maincolor;
 	}
 
 	.home_container {
@@ -543,21 +571,31 @@ body {
 		height: 30px;
 	}
 
-	#waves_div {
+	.waves {
 		width: 100%;
-		height: 300px;
-		margin-top: -123px;
-		background-image: asset-url("waves.svg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		z-index: -4;
+		margin-top: -100px;
+		z-index: -1;
+		position: fixed;
+		left: 0;
+	}
+
+	#back_wave {
+		top: 470px;
+	}
+
+	#mid_wave {
+		top: 520px;
+	}
+
+	#front_wave {
+		top: 530px;
 	}
 
 	#works_container_wrapper {
 		width: 100%;
 		height: 550px;
 		background: mistyrose;
-		margin: -36px auto;
+		margin: 50px auto;
 		padding-top: 20px;
 		position: relative;
 	}
@@ -660,6 +698,7 @@ body {
 		position: relative;
 		background: asset-url("bgtexture.svg") 50% 50%;
 		background-repeat: no-repeat;
+		background-color: $maincolor;
 	}
 
 	#about_container {
@@ -783,9 +822,8 @@ body {
 
 	#contact_container_wrapper {
 		width: 100%;
-		height: 500px;
+		height: 550px;
 		color: white;
-		margin-top: 20px;
 		padding-top: 20px;
 		background: lightslategrey;
 	}

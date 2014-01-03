@@ -1,7 +1,14 @@
 <div class="nav-bar">
 	<div id="nav_contact_wrapper">
 		<div class="navbar_contact">
-			<%= link_to image_tag("r_logo.svg", id: "r_logo" ), root_path %>
+			<%#= link_to image_tag("r_logo.svg", id: "r_logo" ), root_path %>
+			<div id="r_logo" data-0="top:0px;" data-end="top:420px;">
+				<img src="assets/r_logo.svg">
+			</div>
+			<div id="home_logo" data-0="opacity:0;" data-40="opacity:1;">
+				<img  src="assets/home_logo.svg" >
+			</div>
+			<div id="meter" data-0="height:0px;" data-end="height:420px;"></div>
 		</div>
 		<div class="navbar_contact">
 		<p class="contact_text">Randy Rollog Lee</p>

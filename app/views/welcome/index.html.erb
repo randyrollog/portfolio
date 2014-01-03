@@ -1,20 +1,28 @@
 <%= render 'layouts/navbar' %>
 
-<div class="home_container">
-	<h1 id="greeting_header">Hey there, I'm Randy.</h1>
-	<div id="tagline_wrapper">
-		<h3 class="tagline_content">check out my works  </h3>
-		<span class="glyphicon glyphicon-circle-arrow-down tagline_content"></span>
-	</div>
-	<div id="resume_wrapper">
-		<%= image_tag "x2.svg", id: "x_out_resume" %>
-		<div class="zoom" id="my_resume">
-		  <%= image_tag "Resume13_zoom.png", id: "resume_img" %>
+<div id="home_container_wrapper">
+	<div class="home_container">
+		<h1 id="greeting_header">Hey there, I'm Randy.</h1>
+		<div id="tagline_wrapper">
+			<h3 class="tagline_content">check out my works  </h3>
+			<span class="glyphicon glyphicon-circle-arrow-down tagline_content"></span>
 		</div>
+		<!-- <div id="resume_wrapper">
+			<%#= image_tag "x2.svg", id: "x_out_resume" %>
+			<div class="zoom" id="my_resume">
+			  <%#= image_tag "Resume13_zoom.png", id: "resume_img" %>
+			</div>
+		</div>-->
+
+		<%= render "form" %> 
+
 	</div>
-	<%= render "form" %>
 </div>
-<div id="waves_div"></div>
+
+<!-- waves n shit -->
+<img src="assets/back_wave.svg" id="back_wave" class="waves">
+<img src="assets/mid_wave.svg" id="mid_wave" class="waves">
+<img src="assets/front_wave.svg" id="front_wave" class="waves">
 
 <%= render "works" %>
 
@@ -33,9 +41,9 @@
 
 		function parallaxScroll(){
 	    var scrolled = $(window).scrollTop();
-	    $('#parallax-bg1').css('top',(0-(scrolled*.25))+'px');
-	    $('#parallax-bg2').css('top',(0-(scrolled*.5))+'px');
-	    $('#parallax-bg3').css('top',(0-(scrolled*.75))+'px');
+	    $('#back_wave').css('top',(470+(scrolled*.05))+'px');
+	    $('#mid_wave').css('top',(520-(scrolled*.25))+'px');
+	    $('#front_wave').css('top',(530+(scrolled*.08))+'px');
 		}
 
 		var overlay = jQuery('<div id="overlay"> </div>');
