@@ -329,18 +329,19 @@ body {
 	.nav-bar {
 		width: 100%;
 		height: 85px;
-		border-bottom: 1px solid white;
 		position: fixed;
 		top: 0;
 		left: 0;
 		vertical-align: middle;
 		z-index: 1;
-		// background: $maincolor;
 	}
 
 	#nav_contact_wrapper {
 		margin-top: 3px;
 		float: left;
+		border-bottom: 1px solid white;
+		height: 86px;
+		width: 291px;
 	}
 
 	#nav_contact_wrapper_small {
@@ -365,10 +366,14 @@ body {
 		padding: 0;
 	}
 
-	.nav_content_right {
+	#nav_right_wrapper {
+		border-bottom: 1px solid white;
 		float: right;
+	}
+
+	.nav_content_right {
 		color: white;
-		font-size: 23px;
+		font-size: 22px;
 		margin-right: 10px;
 		margin-left: 20px;
 		line-height: 85px;
@@ -476,12 +481,12 @@ body {
 
 
 	#github {
-		background: asset-url("icons.png", image);
-		background-position:  0px 0px;
+		background: asset-url("icon2.png", image);
+		background-position:  -6px 0px;
 		background-repeat: no-repeat;
 		background-size: cover;
-		width: 80px;
-		height: 80px;
+		width: 40px;
+		height: 40px;
 		display: inline-block;
 	}
 	#github:hover {
@@ -490,12 +495,12 @@ body {
 	}
 
 	#linkedin {
-		background: asset-url("icons.png", image);
-		background-position:  -95px 0px;
+		background: asset-url("icon2.png", image);
+		background-position:  -51px 0px;
 		background-repeat: no-repeat;
 		background-size: cover;
-		width: 80px;
-		height: 80px;
+		width: 40px;
+		height: 40px;
 		display: inline-block;
 	}
 	#linkedin:hover {
@@ -504,12 +509,12 @@ body {
 	}
 
 	#soundcloud {
-		background: asset-url("icons.png", image);
-		background-position:  -202px 0px;
+		background: asset-url("icon2.png", image);
+		background-position:  -101px 0px;
 		background-repeat: no-repeat;
 		background-size: cover;
-		width: 85px;
-		height: 80px;
+		width: 42px;
+		height: 40px;
 		display: inline-block;
 	}
 	#soundcloud:hover {
@@ -530,12 +535,12 @@ body {
 	}
 
 	#resume_icon {
-		background: asset-url("icons.png", image);
+		background: asset-url("icon2.png", image);
 		background-position:  -310px 0px;
 		background-repeat: no-repeat;
 		background-size: cover;
-		width: 80px;
-		height: 80px;
+		width: 40px;
+		height: 40px;
 		display: inline-block;
 	}
 	#resume_icon:hover {
@@ -576,12 +581,12 @@ body {
 	}
 
 	#email {
-		background: asset-url("icons.png", image);
+		background: asset-url("icon2.png", image);
 		background-position:  -420px 0px;
 		background-repeat: no-repeat;
 		background-size: cover;
-		width: 80px;
-		height: 80px;
+		width: 40px;
+		height: 40px;
 		display: inline-block;
 	}
 	#email:hover {
@@ -675,14 +680,16 @@ body {
 
 	.piece_titles {
 		position: absolute;
-		padding-left: 15px;
+		padding-left: 10px;
 		margin: 0;
 		left: 0;
 		top: 0;
 		font-weight: bold;
+		padding-top: 2px;
 		width: 696px;
-		height: 40px;
+		height: 45px;
 		background: rgba(0, 0, 0, 0.2);
+		color: snow;
 	}
 
 	.site_links {
