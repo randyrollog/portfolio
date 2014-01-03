@@ -330,11 +330,12 @@ body {
 		width: 100%;
 		height: 85px;
 		border-bottom: 1px solid white;
-		// position: fixed;
-		// top: 0;
-		// left: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
 		vertical-align: middle;
-		z-index: 2;
+		z-index: 1;
+		// background: $maincolor;
 	}
 
 	#nav_contact_wrapper {
@@ -346,9 +347,9 @@ body {
 		display: none;
 	}
 
-	#nav_contact_infooo {
-		margin-left: 72px;
-	}
+	// #nav_contact_infooo {
+	// 	margin-left: 72px;
+	// }
 
 	.navbar_contact {
 		color: white;
@@ -379,10 +380,10 @@ body {
 		margin:0;
 	}
 
-	.scroll_home {
-		position: fixed;
+	// .scroll_home {
+	// 	position: fixed;
 
-	}
+	// }
 
 	#r_logo {
 		margin-left: 12px;
@@ -390,8 +391,9 @@ body {
 		height: 52px;
 		width: auto;
 		transition: .5s;
-		margin-top: 14px;
+		margin-top: 10px;
 		z-index: 3;
+		position: relative;
 	}
 	#r_logo:hover {
 		opacity: .5;
@@ -399,21 +401,25 @@ body {
 
 	#home_logo {
 		height: 47px;
-		left: 11px;
-		top: 15px;
+		position: absolute;
+		left: 12px;
+		top: 18px;
 		z-index: 2;
 		opacity: 0;
+		
 	}
 
 	#meter {
 		width: 7px;
 		height: 5px;
 		background: asset-url("cream_pixels.png");
-		left: 33px;
-		top: 16px;
+		position: absolute;
+		left: 34px;
+		top: 21px;
 		transition: .5s;
 		border-radius: 2px;
 		z-index: 1;
+		
 	}
 
 	#home_container_wrapper {
@@ -452,6 +458,7 @@ body {
 	}
 	a:hover {
 		text-decoration: none;
+		color: #c6e4c8;
 	}
 
 	.glyphicon-circle-arrow-down {
