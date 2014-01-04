@@ -1,6 +1,6 @@
 <!-- i need to make the following:
 resume -->
-<div id="about_container_wrapper">
+<div id="about_container_wrapper" >
 	<div id="about_container">
 		<h1 class="about_headers">About</h1>
 		<ul id="skill_list" class="about_sections">
@@ -28,6 +28,12 @@ resume -->
 		<div id="right_about" class="about_sections" >
 			<div id="bio_container">
 					<p id="bio" >Howdy! I'm a graphic designer turned programmer with a degree in business from USC. I found coding as a fun way to kill time on the side. I read a lot about coding and utilized other online resources, but... I needed more depth. So, I enrolled into an immersive programming school called General Assembly. After a few months of 60-70hr weeks, multiple all-nighters, and no social life, I am fully stacked to make awesome web apps. Call me a Drogrammer (designer + programmer). I love loud music, clean and simple code/design, pizza, & learning new things. Let's make something wicked.</p>
+			</div>
+			<div id="resume_wrapper">
+				<%= image_tag "x2.svg", id: "x_out_resume" %>
+				<div class="zoom" id="my_resume">
+					<%= image_tag "Resume13_zoom.png", id: "resume_img" %>
+				</div>
 			</div>
 			<div id="resmus_wrapper">
 				<%= image_tag "resume_icon.svg", id: "resume_btn", class: "resume_music_btns" %>
@@ -76,7 +82,34 @@ resume -->
 
 <script type="text/javascript">
 	$(function() {
-		$('#song_player').hide();
+
+		var overlay = jQuery('<div id="overlay"> </div>');
+		var mr = $("#my_resume");
+		var xOut = $('#x_out_resume');
+		overlay.appendTo(document.body);
+		overlay.hide();
+
+		mr.hide();
+		mr.zoom();
+
+		xOut.hide();
+
+		
+		$("#resume_btn").click(function(event){
+    	event.preventDefault();
+    	overlay.fadeIn(200);
+      mr.fadeIn(600);
+      xOut.fadeIn(600);
+    });
+
+    xOut.click(function(event){
+    	event.preventDefault();
+      $(this).fadeOut(600);
+      overlay.fadeOut(900);
+      mr.fadeOut(600);
+    });
+
+    $('#song_player').hide();
 		$('#music_caption').hide();
 
 		$('#music_btn').mouseenter(function(event) {
@@ -91,6 +124,7 @@ resume -->
 			event.preventDefault();
 			$('#music_caption').hide(150);
 		});
+
 
 
 	});
