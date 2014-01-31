@@ -15,5 +15,5 @@
 //= require turbolinks
 //= require skrollr.min.js
 //= require skrollr.menu.min.js
+//= require main.js
 //= require_tree .
-

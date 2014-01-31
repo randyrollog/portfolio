@@ -541,18 +541,6 @@ body {
 		opacity: .5;
 	}
 
-	// adds magnifying glass icon to resume
-	.zoom:after {
-		content: '';
-		display: block;
-		width: 33px;
-		height: 33px;
-		position: absolute;
-		top: 0;
-		right: 0;
-		background: asset-url("magnifyglass.png", image);
-	}
-
 	#resume_icon {
 		background: asset-url("icon2.png", image);
 		background-position:  -310px 0px;
@@ -585,7 +573,7 @@ body {
 	}
 
 	#my_resume {
-		position: absolute;
+		position: fixed;
 		left: 50%;
 		top: 50%;
 		margin-left: -220px;
