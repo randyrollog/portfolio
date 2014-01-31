@@ -9,6 +9,9 @@ $(function() {
     $('#back_wave').css('top',(470+(scrolled*.05))+'px');
     $('#mid_wave').css('top',(520-(scrolled*.25))+'px');
     $('#front_wave').css('top',(500-(scrolled*.28))+'px');
+
+    $('#stars_container_1').css('top',(100-(scrolled*.25))+'px');
+    $('#stars_container_2').css('top',((scrolled*.05))+'px');
 	}
 
 	var overlay = jQuery('<div id="overlay"> </div>');
@@ -54,7 +57,7 @@ $(function() {
   	cf.fadeOut(600);
     overlay.fadeOut(900);
   });
-  
+
   // works section
   // set options for slide
     $('.works').slides({
@@ -84,7 +87,7 @@ $(function() {
 			callbacks : {}
     });
 
-    	var overlay = jQuery('<div id="overlay"> </div>');
+    var overlay = jQuery('<div id="overlay"> </div>');
 		var mr = $("#my_resume");
 		var xOut = $('#x_out_resume');
 		overlay.appendTo(document.body);
